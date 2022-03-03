@@ -1,1 +1,169 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../src/assets/variables.scss';
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  color: $secondary-color;
+}
+
+/* General starts */
+a {
+  color: $secondary-color;
+}
+button {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+input,
+button,
+textarea,
+select {
+  font-family: "Poppins", sans-serif;
+}
+input::placeholder,
+textarea::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Buttons Starts */
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  outline: none;
+  border-radius: $border-radius1;
+  transition: all 0.4s;
+  z-index: 1;
+}
+.prim_btn {
+  background-color: $primary-color;
+  color: $white-color;
+  border: 2px solid $primary-color;
+}
+.prim_btn:hover {
+  color: $primary-color;
+  background-color: $white-color;
+  border: 2px solid $primary-color;
+}
+.sec_btn {
+  color: $primary-color;
+  background-color: $white-color;
+  border: 2px solid $primary-color;
+}
+.sec_btn:hover {
+  background-color: $primary-color;
+  color: $white-color;
+}
+/* Buttons ends */
+
+/* Section starts */
+.container {
+  padding: 0 5%;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+}
+.sect {
+  padding: 5rem 0;
+}
+@media only screen and (max-width: 870px) {
+  .sect {
+    padding: 3rem 0;
+  }
+}
+/* Section ends */
+.dis-flex {
+  display: flex;
+  align-items: center;
+}
+.clickable {
+  cursor: pointer;
+}
+.uc {
+  text-transform: uppercase;
+}
+.yc {
+  color: $dark-sec-color;
+}
+.gc {
+  color: $primary-color;
+}
+/* Headings starts */
+h1 {
+  font-size: 44px;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 26px;
+  font-weight: 500;
+}
+h4 {
+  font-size: 22px;
+  font-weight: 500;
+}
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+p {
+  font-weight: 300;
+}
+/* Headings ends */
+
+/* nd flex starts */
+.nd-flex-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nd-flex-content.row-reverse {
+  flex-direction: row-reverse;
+}
+.nd-flex-details {
+  flex-basis: 50%;
+}
+.nd-flex-details h3 {
+  margin-bottom: 1.5rem;
+}
+.paragh {
+  margin: 1.5rem 0 2rem 0;
+}
+.nd-flex-img {
+  flex-basis: 40%;
+  // text-align: center;
+}
+.nd-flex-img img {
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 670px) {
+  .nd-flex-content {
+    display: grid;
+    grid-gap: 2rem;
+  }
+}
+/* nd flex ends */

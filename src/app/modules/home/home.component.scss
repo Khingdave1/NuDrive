@@ -1,0 +1,160 @@
+// Import
+@import '../../../assets/variables.scss';
+
+@mixin bg-image($image) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), $image;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+//-- Hero starts --//
+.hero {
+  background-color: $primary-color;
+  color: $white-color;
+  min-height: 100vh;
+  &_content {
+    // flex-basis: 50%;
+    padding: 5%;
+    &_title {
+      margin-bottom: $m-3;
+    }
+    &_btns {
+      margin-top: $m-2;
+      .btn {
+        &:not(:last-child) {
+          margin-right: $m-2;
+        }
+        &.prim_btn,
+        &.sec_btn {
+          border: 2px solid $white-color;
+        }
+      }
+    }
+  }
+  &_bg {
+    width: 100%;
+    height: 100vh;
+    flex-basis: 50%;
+    &_img {
+      width: 100%;
+      height: 100%;
+      @include bg-image(url('../../../assets/img/hero-bg.png'));
+    }
+  }
+}
+//-- Hero ends --//
+
+//-- Why us ends --//
+.why_us {
+  position: relative;
+  .vectors {
+    img {
+      position: absolute;
+      z-index: -10;
+      height: auto;
+      &:nth-child(1) {
+        top: -30px;
+        left: 0;
+        width: 200px;
+      }
+      &:nth-child(2) {
+        bottom: 0;
+        right: 0;
+        width: 286px;
+        height: 200px;
+      }
+    }
+    // content: url('../../../assets/img/vector1.png');
+  }
+}
+//-- Why us ends --//
+
+//-- Download ends --//
+.download {
+  &_content {
+    &_title {
+      margin-bottom: $m-2;
+    }
+  }
+  &_btns {
+    margin-top: $m-3;
+    button {
+      &:not(:last-child) {
+        margin-right: $m-2;
+      }
+      img {
+        margin-right: $m-1;
+      }
+    }
+  }
+}
+//-- Download ends --//
+
+//-- what to ends --//
+.what_to {
+  .card_item img {
+    width: 90px;
+    height: 44.61px;
+  }
+}
+//-- what to ends --//
+
+//-- Subscribe starts --//
+.subscribe {
+  @include bg-image(url('../../../assets/img/subscribe-bg.png'));
+  display: flex;
+  &_content {
+    margin: auto;
+    background-color: $white-color;
+    border-radius: $border-radius2;
+    padding: $m-5;
+    width: 50%;
+    @media only screen and (max-width: 760px) {
+      width: 90%;
+    }
+    .form {
+      margin-top: $m-3;
+      &_field {
+        background-color: rgba(4, 158, 207, 0.1);
+        border-radius: $border-radius1;
+        font-size: 16px;
+        transition: all 0.2s;
+        padding: 1rem;
+        input  {
+          width: 100%;
+          border: none;
+          outline: none;
+          background-color: transparent;
+        }
+      }
+      .btn {
+        margin-top: $m-2;
+        @media only screen and (max-width: 760px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+//-- Subscribe ends --//
+
+//-- Card ends --//
+.card {
+  display: grid;
+  grid-gap: 2rem;
+  @media only screen and (min-width: 450px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  &_item {
+    text-align: center;
+    img {
+      margin-bottom: $m-3;
+    }
+    p {
+      margin-top: $m-2;
+    }
+  }
+}
+//-- Card ends --//
+
+
