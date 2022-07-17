@@ -1,12 +1,8 @@
 // Import
-@import '../../../assets/variables.scss';
+@import '../../../assets/css/variables.scss';
+@import '../../../assets/css/mixins.scss';
 
-@mixin bg-image($image) {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), $image;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+
 //-- Hero starts --//
 .hero {
   background-color: $primary-color;
@@ -102,6 +98,7 @@
 //-- Subscribe starts --//
 .subscribe {
   @include bg-image(url('../../../assets/img/subscribe-bg.png'));
+  background-attachment: fixed;
   display: flex;
   &_content {
     margin: auto;
@@ -137,24 +134,5 @@
   }
 }
 //-- Subscribe ends --//
-
-//-- Card ends --//
-.card {
-  display: grid;
-  grid-gap: 2rem;
-  @media only screen and (min-width: 450px) {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-  &_item {
-    text-align: center;
-    img {
-      margin-bottom: $m-3;
-    }
-    p {
-      margin-top: $m-2;
-    }
-  }
-}
-//-- Card ends --//
 
 

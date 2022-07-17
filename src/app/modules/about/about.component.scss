@@ -1,0 +1,44 @@
+.story {
+  h1 {
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      background: #E6AF2E;
+      border-radius: 50%;
+      display: inline-block;
+      z-index: -1;
+    }
+  }
+  p {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.download_content_title {
+  margin-bottom: 1rem;
+}
+.nr_flex_img {
+  img {
+    border-radius: 10px;
+  }
+}
+.card {
+  @media only screen and (min-width: 450px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+.card_item {
+  p {
+    // margin-top: 0;
+  }
+}

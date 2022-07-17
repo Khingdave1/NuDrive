@@ -1,0 +1,106 @@
+// Import
+@import '../../../assets/css/variables.scss';
+
+.ds_hero {
+  background-image: url('../../../assets/img/driver_signup/driver_signup_hero_bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &_body {
+    justify-content: space-between;
+    &_content,
+    &_form {
+      flex-basis: 45%;
+    }
+    &_content {
+      color: $white-color;
+    }
+    &_form {
+      background-color: $white-color;
+      padding: 2rem;
+      border-radius: $border-radius1;
+      h3 {
+        margin-bottom: 2rem;
+      }
+      input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+      }
+    }
+    .form_btn {
+      .btn {
+        width: 100%;
+      }
+    }
+    .form_agreement {
+      margin-top: 1rem;
+      span {
+        color: $primary-color;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background-color: #f4f4f4;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  transition: all 0.2s;
+}
+form select {
+  color: var(--dark-green-color);
+}
+
+form {
+  display: grid;
+  grid-gap: 1rem;
+}
+.input_field {
+  background-color: #f4f4f4;
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease-in;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-radius: $border-radius1;
+}
+.input_field:hover {
+  box-shadow: var(--box-shadow);
+}
+// .input_field span {
+//   padding: 0 ;
+// }
+form input::placeholder,
+form textarea::placeholder,
+form select {
+  color: var(--dark-green-color);
+}
+form select option:hover {
+  background-color: var(--dark-green-color);
+}
+
+
+//-- what to ends --//
+.what_to {
+  .card_item img {
+    width: 90px;
+    height: 44.61px;
+  }
+}
+.what_to2 {
+  .card_item img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+  }
+}
+//-- what to ends --//
+
